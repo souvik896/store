@@ -1,0 +1,35 @@
+<form (ngSubmit)="saveData()" [formGroup]="addFormGroup">
+    <div class="f-name">Login</div>
+    <div data-mdb-input-init class="form-outline mb-4">
+      <input type="email" id="form2Example1" formControlName="email" class="form-control" />
+      <label class="form-label" for="form2Example1">Email address</label>  <small style="color: red;"
+      *ngIf="addFormGroup.get('email').touched && addFormGroup.get('email').invalid">*Email field
+      invalid</small>
+    </div>
+  
+    <!-- Password input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+      <input type="password" id="form2Example2"formControlName="password" class="form-control" />
+      <label class="form-label" for="form2Example2">Password</label>   <small style="color: red;" *ngIf="addFormGroup.get('password').touched && addFormGroup.get('password')?.errors?.['minlength']">
+        * Password minlength is 8
+      </small>
+    </div>
+  
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+      <div class="col">
+        <!-- Simple link -->
+        <a href="#!">Forgot password?</a>
+      </div>
+    </div>
+  
+    <!-- Submit button -->
+    <button  type="submit" data-mdb-button-init data-mdb-ripple-init [disabled]="addFormGroup.invalid" class="btn btn-primary btn-block mb-4">Sign in</button>
+  
+    <!-- Register buttons -->
+    <div class="text-center" (click)="navigateToReg()">
+      <p class="member" >Not a member? <a >Register</a></p>
+
+    </div>
+    <small style="color: red;" >{{errormsg}}</small>
+  </form>

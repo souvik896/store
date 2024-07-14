@@ -1,0 +1,25 @@
+form{
+    margin: auto;
+    width: 40%;
+    margin-top: 48px;
+    border: 1px solid gainsboro;
+    padding: 39px;
+    border-radius: 11px;
+    -webkit-box-shadow: 5px 5px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 19px 0px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 19px 0px rgba(0,0,0,0.75);
+    .f-name{
+        justify-content: center;
+        display: flex;
+        margin: 17px;
+        font-size: 28px;
+    }
+    .text-center{
+        cursor: pointer;
+    }
+    .member:hover{
+    font-size: 17px;
+    text-decoration: underline;
+    color: grey;
+    }
+}
